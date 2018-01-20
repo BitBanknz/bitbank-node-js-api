@@ -25,6 +25,12 @@ bitbankApi.fetchAllPairs(function (pairToFeaturesets) {
 })
 ```
 
+```
+# fetch historical forecasts ~4 hours of forecasts 
+bitbankApi.getHistoricalFeaturesets('USDT_BTC', function (featuresets) {
+})
+```
+
 ### Testing
 
 ```
@@ -32,3 +38,9 @@ npm install
 
 node node_modules/jasmine-node/bin/jasmine-node spec/
 ```
+
+#### Development
+
+Add tests in [test-bitbank-spec](spec/test-bitbank-spec.js)
+
+publish to npm with `npm publish`

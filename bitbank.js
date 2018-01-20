@@ -7,7 +7,6 @@ var bitbank = (function () {
     var bitbankSelf = {};
     bitbankSelf.api_key = api_key;
 
-
     bitbankSelf.fetchPair = function (currency_pair, callback) {
       fetch('https://bitbank.nz/api/forecasts/' + currency_pair + '?secret=' + bitbankSelf.api_key)
         .then(function (res) {
@@ -20,10 +19,10 @@ var bitbank = (function () {
       });
     };
     bitbankSelf.fetchAllPairs = function (callback) {
-      fetch('https://bitbank.nz/api/forecasts' + '?secret=' + bitbankSelf.api_key)
+      fetch('https://bitbank.nz/api/forecasts?secret=' + bitbankSelf.api_key)
         .then(function (res) {
-            return res.json();
-          })
+          return res.json();
+        })
         .then(function (json) {
           var results = json['results'];
           var pairToFeaturesets = {}
@@ -35,7 +34,20 @@ var bitbank = (function () {
         }).catch(function (err) {
         console.log(err);
       });
-    }
+    };
+    bitbankSelf.getHistoricalFeaturesets = function (currency_pair, callback) {
+      fetch('https://bitbank.nz/api/coin/' + currency_pair + '?secret=' + bitbankSelf.api_key)
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (json) {
+          var results = json['results'];
+
+          callback(results);
+        }).catch(function (err) {
+        console.log(err);
+      });
+    };
     return bitbankSelf;
   };
 
