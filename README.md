@@ -10,7 +10,7 @@ npm install bitbank-node-js-api
 
 
 ```
-var bitbank = require('bitbank-node-js-api')
+var bitbank = require('bitbank-node-api')
 var bitbankApi = bitbank.BitBank('TEST_API_KEY');
 # fetch latest forecasts for a single pair
 bitbankApi.fetchPair('USDT_BTC', function (featureset) {

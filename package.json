@@ -1,5 +1,5 @@
 {
-  "name": "bitbank-node-js-api",
+  "name": "bitbank-node-api",
   "version": "1.0.0",
   "description": "Node API for BitBank.nz",
   "main": "bitbank.js",
