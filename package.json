@@ -1,0 +1,33 @@
+{
+  "name": "bitbank-node-js-api",
+  "version": "1.0.0",
+  "description": "Node API for BitBank.nz",
+  "main": "bitbank.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitBanknz/bitbank-node-js-api.git"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "bitcoin",
+    "prediction",
+    "trading",
+    "bot"
+  ],
+  "author": "Lee Penkman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BitBanknz/bitbank-node-js-api/issues"
+  },
+  "homepage": "https://github.com/BitBanknz/bitbank-node-js-api#readme",
+  "devDependencies": {
+    "jasmine": "2.9.0",
+    "jasmine-node": "1.14.5"
+  },
+  "dependencies": {
+    "node-fetch": "1.7.3"
+  }
+}
